@@ -6,13 +6,49 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:56:46 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 13:01:41 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/23 14:55:05 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_hexadecimal(unsigned int n, char format)
+static void	ft_putstr(char *s, int i)
 {
-	return 0;
+	int	j;
+
+	j = i - 1;
+	while (j >= 0)
+	{
+		write(1, &s[j], 1);
+		j--;
+	}
+}
+
+int	ft_printf_hexadecimal(unsigned int n)
+{
+	long int	q;
+	long int	temp;
+	int			i;
+	int			j;
+	char		*hexa;
+
+	i = 0;
+	q = n;
+	while(q != 0)
+	{
+		temp = q % 16;
+		if (temp < 10)
+			temp += 48;
+		else
+			temp += 55;
+		hexa[i] = temp;
+		q /= 16;
+	}
+	ft_putstr(hexa, i);
+	return (i);
+}
+
+int main(void)
+{
+	printf("\n%d",ft_printf_hexadecimal(19));
 }
