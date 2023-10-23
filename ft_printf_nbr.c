@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 14:29:16 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 11:38:44 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:11:04 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ static void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
 	{
-		write(1, "-2147483648", 11);
-		return ;
+		ft_putchar('-');
+		ft_putnbr('2');
+		ft_putnbr(147483648);
 	}
 	if (n < 0)
 	{
@@ -38,7 +39,7 @@ static void	ft_putnbr(int n)
 		ft_putchar(n + 48);
 }
 
-int	ft_print_nbr(int n)
+int	ft_printf_nbr(int n)
 {
 	long int	nbr;
 	int			i;
@@ -58,10 +59,3 @@ int	ft_print_nbr(int n)
 	ft_putnbr(n);
 	return (i);
 }
-
-/*
-int main(void)
-{
-	printf("\n%d",ft_print_nbr(-10));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:04:02 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 09:40:12 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:02:03 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,8 @@ int	ft_printf_char(int c);
 int	ft_printf_nbr(int n);
 int	ft_printf_str(char *s);
 int	ft_printf_unsigned(unsigned int n);
+int	ft_printf_pointer(unsigned long long p);
+int	ft_printf_percent(void);
+int	ft_printf_hexadecimal(unsigned int n, char format);
 
 #endif

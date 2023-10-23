@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 11:50:20 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 09:59:52 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:28:44 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,6 @@ int	ft_printf(const char *format, ...)
 
 int main(void)
 {
-	char i = 'c';
-	ft_printf("ola %c", i);
+	unsigned int i = 20;
+	ft_printf("ola %u", i);
 }
