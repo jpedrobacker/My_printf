@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:04:02 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 13:02:03 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:41:47 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 int	ft_printf(const char *format, ...);
 int	ft_printf_char(int c);
-int	ft_printf_nbr(int n);
+int	ft_printf_nbr(long int n);
 int	ft_printf_str(char *s);
 int	ft_printf_unsigned(unsigned int n);
 int	ft_printf_pointer(unsigned long long p);

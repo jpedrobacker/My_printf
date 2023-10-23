@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 11:50:20 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 13:28:44 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:44:18 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	check_types(va_list args, const char format)
 	else if (format == 'p')
 		i += ft_printf_pointer(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
-		i += ft_printf_nbr(va_arg(args, int));
+		i += ft_printf_nbr(va_arg(args, long int));
 	else if (format == 'u')
 		i += ft_printf_unsigned(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
@@ -66,6 +66,6 @@ int	ft_printf(const char *format, ...)
 
 int main(void)
 {
-	unsigned int i = 20;
+	unsigned int i = -1;
 	ft_printf("ola %u", i);
 }

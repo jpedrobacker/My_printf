@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	int i = -1;
+	unsigned int i = -1;
 
-	printf("%u", (unsigned int)i);
+	printf("%u", i);
 }
