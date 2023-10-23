@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 11:50:20 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/22 11:50:20 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/23 09:59:52 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,16 @@ static int	check_types(va_list args, const char format)
 		i += ft_printf_char(va_arg(args, int));
 	else if (format == 's')
 		i += ft_printf_str(va_arg(args, char *));
+	else if (format == 'p')
+		i += ft_printf_pointer(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
-		i += ft_print_nbr(va_arg(args, int));
+		i += ft_printf_nbr(va_arg(args, int));
+	else if (format == 'u')
+		i += ft_printf_unsigned(va_arg(args, unsigned int));
+	else if (format == 'x' || format == 'X')
+		i += ft_printf_hexadecimal(va_arg(args, unsigned int), format);
+	else if (format == '%')
+		i += ft_printf_percent();
 	return (i);
 }
 

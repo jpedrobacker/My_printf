@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 12:04:02 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 09:40:12 by jbergfel         ###   ########.fr       */
+/*   Created: 2023/10/16 10:38:18 by jbergfel          #+#    #+#             */
+/*   Updated: 2023/10/20 13:23:39 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdio.h>
-# include <strings.h>
-# include "libft/libft.h"
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
+{
+	size_t	i;
+	char	*istr1;
+	char	*istr2;
 
-int	ft_printf(const char *format, ...);
-int	ft_printf_char(int c);
-int	ft_printf_nbr(int n);
-int	ft_printf_str(char *s);
-int	ft_printf_unsigned(unsigned int n);
-
-#endif
+	istr1 = (char *)str1;
+	istr2 = (char *)str2;
+	i = 0;
+	while (i < n)
+	{
+		if (istr1[i] < istr2[i] || istr1[i] > istr2[i])
+			return ((unsigned char)istr1[i] - (unsigned char)istr2[i]);
+		i++;
+	}
+	return (0);
+}

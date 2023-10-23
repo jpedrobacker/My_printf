@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 12:04:02 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 09:40:12 by jbergfel         ###   ########.fr       */
+/*   Created: 2023/10/16 10:39:04 by jbergfel          #+#    #+#             */
+/*   Updated: 2023/10/20 13:25:11 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdio.h>
-# include <strings.h>
-# include "libft/libft.h"
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
 
-int	ft_printf(const char *format, ...);
-int	ft_printf_char(int c);
-int	ft_printf_nbr(int n);
-int	ft_printf_str(char *s);
-int	ft_printf_unsigned(unsigned int n);
-
-#endif
+	i = 0;
+	if (size < 1)
+		return (ft_strlen(src));
+	while (src[i] && i < size - 1)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(src));
+}

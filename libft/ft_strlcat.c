@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/22 12:04:02 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 09:40:12 by jbergfel         ###   ########.fr       */
+/*   Created: 2023/10/16 10:39:01 by jbergfel          #+#    #+#             */
+/*   Updated: 2023/10/20 13:25:05 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include <stdio.h>
-# include <strings.h>
-# include "libft/libft.h"
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	dstlen;
+	size_t	srclen;
 
-int	ft_printf(const char *format, ...);
-int	ft_printf_char(int c);
-int	ft_printf_nbr(int n);
-int	ft_printf_str(char *s);
-int	ft_printf_unsigned(unsigned int n);
-
-#endif
+	i = 0;
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if (size == 0)
+		return (srclen);
+	if (dstlen > size)
+		return (srclen + size);
+	while (src[i] && dstlen + i < size - 1)
+	{
+		dst[dstlen + i] = src[i];
+		i++;
+	}
+	dst[dstlen + i] = '\0';
+	return (srclen + dstlen);
+}
