@@ -29,7 +29,7 @@ static int	check_types(va_list args, const char format)
 	else if (format == 's')
 		i += ft_printf_str(va_arg(args, char *));
 	else if (format == 'p')
-		i += ft_printf_pointer(va_arg(args, unsigned long long));
+		i += ft_printf_pointer(va_arg(args, size_t));
 	else if (format == 'd' || format == 'i')
 		i += ft_printf_nbr(va_arg(args, long int));
 	else if (format == 'u')

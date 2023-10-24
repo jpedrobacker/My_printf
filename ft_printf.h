@@ -18,6 +18,8 @@
 # include <stdarg.h>
 # include <stdio.h>
 # include <strings.h>
+# include <limits.h>
+# include <stdint.h>
 # include "libft/libft.h"
 
 int	ft_printf(const char *format, ...);
@@ -25,7 +27,7 @@ int	ft_printf_char(int c);
 int	ft_printf_nbr(long int n);
 int	ft_printf_str(char *s);
 int	ft_printf_unsigned(unsigned int n);
-int	ft_printf_pointer(unsigned long long p);
+int	ft_printf_pointer(size_t p);
 int	ft_printf_percent(void);
 int	ft_printf_hexadecimal(unsigned int n, char format);
 

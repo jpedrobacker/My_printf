@@ -40,8 +40,7 @@ int	ft_printf_hexadecimal(unsigned int n, char format)
 	long int	q;
 	long int	temp;
 	int			i;
-	int			j;
-	char		hexa[100];
+	char		hexa[16];
 
 	i = 0;
 	q = n;
