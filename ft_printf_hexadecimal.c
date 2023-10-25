@@ -6,13 +6,13 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:56:46 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/23 16:01:36 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/25 10:08:47 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_putstr(char *s, int i, char format)
+static void	ft_putstrhex(char *s, int i, char format)
 {
 	int	j;
 	int	k;
@@ -44,7 +44,7 @@ int	ft_printf_hexadecimal(unsigned int n, char format)
 
 	i = 0;
 	q = n;
-	while(q != 0)
+	while (q != 0)
 	{
 		temp = q % 16;
 		if (temp < 10)
@@ -54,6 +54,6 @@ int	ft_printf_hexadecimal(unsigned int n, char format)
 		hexa[i++] = temp;
 		q /= 16;
 	}
-	ft_putstr(hexa, i, format);
+	ft_putstrhex(hexa, i, format);
 	return (i);
 }

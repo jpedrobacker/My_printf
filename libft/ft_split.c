@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:36:35 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/20 13:24:33 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/25 11:50:01 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static size_t	word_len(const char *s, char c)
 
 static void	ft_split_free(char **arr, size_t j)
 {
-	while (j >= 0)
+	while (j > 0)
 	{
 		free(arr[j]);
 		j--;

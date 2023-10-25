@@ -51,8 +51,8 @@ NAME 		=	libft.a
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-		ar -rcs $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(BNSOBJ)
+		ar -rcs $(NAME) $(OBJ) $(BNSOBJ)
 
 .c.o:
 		$(CC) -c $(CFLAGS) $<

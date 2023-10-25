@@ -4,14 +4,14 @@ int main(void)
 {
 	char c = 'c';
 	char *s = "teste";
-	int p = 12314;
+	int p = 0;
 	int x = 10;
 	int X = 15;
-	int i = -20;
+	int i = -24280;
 	int d = 412;
-	int u = 41286;
-	char f = 'f';
+	int u = 6;
 
+	ft_printf("\n----------------------MEU-------------------\n");
 	ft_printf("teste c: %c\n", c);
 	ft_printf("teste s: %s\n", s);
 	ft_printf("teste p: %p\n", p);
@@ -20,5 +20,15 @@ int main(void)
 	ft_printf("teste i: %i\n", i);
 	ft_printf("teste d: %d\n", d);
 	ft_printf("teste u: %u\n", u);
-	ft_printf("teste f: %%\n", f);
+	ft_printf("teste f: %%\n");
+	ft_printf("\n---------------------Original-------------------\n");
+	printf("teste c: %c\n", c);
+	printf("teste s: %s\n", s);
+	printf("teste p: %p\n", (void *)0);
+	printf("teste x: %x\n", x);
+	printf("teste X: %X\n", X);
+	printf("teste i: %i\n", i);
+	printf("teste d: %d\n", d);
+	printf("teste u: %u\n", u);
+	printf("teste f: %%\n");
 }

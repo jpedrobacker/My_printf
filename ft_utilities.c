@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_unsigned.c                               :+:      :+:    :+:   */
+/*   ft_utilities.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 09:39:00 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/25 11:37:18 by jbergfel         ###   ########.fr       */
+/*   Created: 2023/10/25 09:59:07 by jbergfel          #+#    #+#             */
+/*   Updated: 2023/10/25 10:00:40 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_unsigned(unsigned int n)
+void	ft_putchar(char c)
 {
-	int				l;
-	unsigned int	nbr;
+	write(1, &c, 1);
+}
 
-	nbr = n;
-	l = 0;
-	if (n <= 0)
+void	ft_putnbr(long int n)
+{
+	if (n < 0)
 	{
-		n = -n;
-		l++;
+		ft_putchar('-');
+		n *= -1;
 	}
-	while (nbr > 9)
+	if (n > 9)
 	{
-		nbr /= 10;
-		l++;
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
 	}
-	ft_putnbr(n);
-	return (l);
+	else
+		ft_putchar(n + 48);
 }
