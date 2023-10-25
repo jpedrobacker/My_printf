@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:39:00 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/25 11:37:18 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:35:24 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,7 @@ int	ft_printf_unsigned(unsigned int n)
 	unsigned int	nbr;
 
 	nbr = n;
-	l = 0;
-	if (n <= 0)
-	{
-		n = -n;
-		l++;
-	}
+	l = 1;
 	while (nbr > 9)
 	{
 		nbr /= 10;

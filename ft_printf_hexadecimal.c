@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:56:46 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/25 10:08:47 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:41:22 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ int	ft_printf_hexadecimal(unsigned int n, char format)
 
 	i = 0;
 	q = n;
+	if (n == 0)
+	{
+		ft_putnbr(n);
+		return (1);
+	}
 	while (q != 0)
 	{
 		temp = q % 16;

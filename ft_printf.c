@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 11:50:20 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/25 10:55:51 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:31:01 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	ft_printf(const char *format, ...)
 	int		p;
 
 	i = 0;
+	p = 0;
 	va_start(args, format);
 	while (format[i])
 	{
