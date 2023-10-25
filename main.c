@@ -4,10 +4,11 @@ int main(void)
 {
 	char c = 'c';
 	char *s = "teste";
-	int p = 0;
+	void *p;
 	int x = 10;
 	int X = 15;
 	int i = -24280;
+	p = &i;
 	int d = 412;
 	int u = 6;
 
@@ -24,7 +25,7 @@ int main(void)
 	ft_printf("\n---------------------Original-------------------\n");
 	printf("teste c: %c\n", c);
 	printf("teste s: %s\n", s);
-	printf("teste p: %p\n", (void *)0);
+	printf("teste p: %p\n", p);
 	printf("teste x: %x\n", x);
 	printf("teste X: %X\n", X);
 	printf("teste i: %i\n", i);
