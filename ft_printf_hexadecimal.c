@@ -15,12 +15,10 @@
 static void	ft_putstrhex(char *s, int i, char format)
 {
 	int	j;
-	int	k;
 
-	k = 0;
-	j = i - 1;
 	if (format == 'x')
 	{
+		j = i - 1;
 		while (s[k])
 		{
 			if (s[k] >= 65 && s[k] <= 90)
@@ -28,6 +26,7 @@ static void	ft_putstrhex(char *s, int i, char format)
 			k++;
 		}
 	}
+	j = i - 1;
 	while (j >= 0)
 	{
 		write(1, &s[j], 1);
