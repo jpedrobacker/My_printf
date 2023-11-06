@@ -7,9 +7,9 @@ int main(void)
 	void *p;
 	int x = 10;
 	int X = 15;
-	int i = -24280;
+	int i = -2147483648;
 	p = &i;
-	int d = 412;
+	long int d = 2147483647;
 	int u = 6;
 
 	ft_printf("\n----------------------MEU-------------------\n");
