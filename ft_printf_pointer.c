@@ -6,15 +6,15 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:55:09 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/25 11:00:37 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:05:18 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_putstrhex(char *s, int32_t i)
+static void	ft_putstrhex(char *s, int i)
 {
-	int32_t	j;
+	int	j;
 
 	j = i - 1;
 	while (j >= 0)
@@ -25,11 +25,11 @@ static void	ft_putstrhex(char *s, int32_t i)
 	}
 }
 
-static int32_t	ft_hex(unsigned long nbr)
+static int	ft_hex(unsigned long nbr)
 {
 	unsigned long	q;
-	int32_t			temp;
-	int32_t			i;
+	int				temp;
+	int				i;
 	char			hexa[16];
 
 	i = 0;

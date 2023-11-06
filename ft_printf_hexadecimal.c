@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 09:56:46 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/25 14:41:22 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:33:44 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ static void	ft_putstrhex(char *s, int i, char format)
 	if (format == 'x')
 	{
 		j = i - 1;
-		while (s[k])
+		while (j >= 0)
 		{
-			if (s[k] >= 65 && s[k] <= 90)
-				s[k] += 32;
-			k++;
+			if (s[j] >= 65 && s[j] <= 90)
+				s[j] += 32;
+			j--;
 		}
 	}
 	j = i - 1;
